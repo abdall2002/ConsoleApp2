@@ -4,8 +4,9 @@ using NestedType;
 using System;
 
 
+Student st = new Student();
+st.Show();
 
-var p = new Person();
 
 
 
