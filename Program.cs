@@ -4,8 +4,18 @@ using NestedType;
 using System;
 
 
-Student st = new Student();
-st.Show();
+//Student st;
+//st.Show();
+
+Digitalize size = new Digitalize(60000);
+
+Console.WriteLine(size.Bit);          // -> print 60,000 Bit;
+Console.WriteLine(size.Byte);         // -> print 7,500  Bit;
+Console.WriteLine(size.KB);           // -> print 7     Bit;
+Console.WriteLine(size.MB);           // -> print 0     Bit;
+Console.WriteLine(size.GB);           // -> print 0     Bit;
+Console.WriteLine(size.TB);           // -> print 0     Bit;
+
 
 
 
