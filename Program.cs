@@ -34,7 +34,7 @@ using System;
 //DateTime dt = new DateTime();
 //Console.WriteLine(dt);                 // -> print default 1/1/0001 12:00:00 AM;
 
-DateTime dt2 = new DateTime(2002,5,12, 12,30,40);
+DateTime dt2 = new DateTime(2002,5,12, 12,30,40);      // -> store date and time;
 Console.WriteLine(dt2);                 // -> print default 5/12/2002 12:30:40 PM;
 dt2 = dt2.AddDays(10);
 Console.WriteLine(dt2);                 // -> print default 5/22/2002 12:30:40 PM;
