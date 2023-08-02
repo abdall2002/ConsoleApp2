@@ -30,5 +30,40 @@ namespace NestedType
         {
             this.bit = iniatialValue;  
         }
+
+        public Digitalize AddBit(long bit)
+        {
+            return Add(bit, bitsInBit);
+        }
+        public Digitalize AddByte(long bit)
+        {
+            return Add(bit, bitsInByte);
+        }
+
+        public Digitalize AddKB(long bit)
+        {
+            return Add(bit, bitsInKB);
+        }
+        public Digitalize AddBMB(long bit)
+        {
+            return Add(bit, bitsInMB);
+        }
+        public Digitalize AddGB(long bit)
+        {
+            return Add(bit, bitsInGB);
+        }
+        public Digitalize AddTB(long bit)
+        {
+            return Add(bit, bitsInTB);
+        }
+
+
+
+
+
+        private Digitalize Add(long value, long scale) 
+        {
+            return new Digitalize(value * scale);
+        }
     }
 }

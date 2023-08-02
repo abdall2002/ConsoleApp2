@@ -9,6 +9,10 @@ using System;
 
 Digitalize size = new Digitalize(60000);
 
+//size= size.AddBit(8);   // -> print  8 - 1 - 0 - 0 - 0 - 0; 
+
+Digitalize size2 = size.AddBit(8);
+
 Console.WriteLine(size.Bit);          // -> print 60,000 Bit;
 Console.WriteLine(size.Byte);         // -> print 7,500  Bit;
 Console.WriteLine(size.KB);           // -> print 7     Bit;
@@ -16,6 +20,14 @@ Console.WriteLine(size.MB);           // -> print 0     Bit;
 Console.WriteLine(size.GB);           // -> print 0     Bit;
 Console.WriteLine(size.TB);           // -> print 0     Bit;
 
+Console.WriteLine("--------------------------------------------");
+
+Console.WriteLine(size2.Bit);          // -> print 8 Bit;
+Console.WriteLine(size2.Byte);         // -> print 1  Bit;
+Console.WriteLine(size2.KB);           // -> print 0     Bit;
+Console.WriteLine(size2.MB);           // -> print 0     Bit;
+Console.WriteLine(size2.GB);           // -> print 0     Bit;
+Console.WriteLine(size2.TB);           // -> print 0     Bit;
 
 
 
