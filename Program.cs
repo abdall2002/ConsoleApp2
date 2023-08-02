@@ -24,10 +24,10 @@ Console.WriteLine("--------------------------------------------");
 
 Console.WriteLine(size2.Bit);          // -> print 8 Bit;
 Console.WriteLine(size2.Byte);         // -> print 1  Bit;
-Console.WriteLine(size2.KB);           // -> print 0     Bit;
-Console.WriteLine(size2.MB);           // -> print 0     Bit;
-Console.WriteLine(size2.GB);           // -> print 0     Bit;
-Console.WriteLine(size2.TB);           // -> print 0     Bit;
+Console.WriteLine(size2.KB);           // -> print 0  Bit;
+Console.WriteLine(size2.MB);           // -> print 0  Bit;
+Console.WriteLine(size2.GB);           // -> print 0  Bit;
+Console.WriteLine(size2.TB);           // -> print 0  Bit;
 
 
 
