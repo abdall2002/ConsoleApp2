@@ -34,10 +34,10 @@ using System;
 //DateTime dt = new DateTime();
 //Console.WriteLine(dt);                 // -> print default 1/1/0001 12:00:00 AM;
 
-DateTime dt2 = new DateTime(2002,5,12, 12,30,40);      // -> store date and time;
-Console.WriteLine(dt2);                 // -> print default 5/12/2002 12:30:40 PM;
-dt2 = dt2.AddDays(10);
-Console.WriteLine(dt2);                 // -> print default 5/22/2002 12:30:40 PM;
+//DateTime dt2 = new DateTime(2002,5,12, 12,30,40);      // -> store date and time;
+//Console.WriteLine(dt2);                 // -> print default 5/12/2002 12:30:40 PM;
+//dt2 = dt2.AddDays(10);
+//Console.WriteLine(dt2);                 // -> print default 5/22/2002 12:30:40 PM;
 
 //dt2.AddDays(10);
 //Console.WriteLine(dt2);
@@ -54,4 +54,31 @@ Console.WriteLine(dt2);                 // -> print default 5/22/2002 12:30:40 P
 //    }
 //  }
 //}
+/////////////////////////////////////////////////////////////
 
+/* Enums */
+
+//Console.WriteLine(Month.Feb);           // -> print Feb;
+//Console.WriteLine((int)Month.Feb);      // -> print 1;
+
+//var day = "Feb";
+//Console.WriteLine(Enum.Parse(typeof(Month), day)) ;        // -> print Feb;
+//Console.WriteLine(Enum.IsDefined(typeof(Month), day)) ;    // -> print True;
+
+//foreach (var month in Enum.GetNames(typeof(Month)))
+//{
+  //  Console.WriteLine($"{month} = {(int)Enum.Parse(typeof(Month),month)}");
+//}
+//foreach (var month in Enum.GetValues(typeof(Month)))
+//{
+  //  Console.WriteLine($"{month.ToString()} = {(int)month}");
+//}
+
+///////////////////////////////////////////////////////////
+
+/* Inheritance */
+
+Eagle e = new Eagle();
+Animal a = e;         // -> point to Eagle; tread with Class Animal only; (Up Casting)
+Eagle e2 = (Eagle)a;  // -> (Down Casting); treat with Move() and Fly(); 
+Console.WriteLine(e);
