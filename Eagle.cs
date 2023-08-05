@@ -12,5 +12,11 @@ namespace NestedType
         {
             Console.WriteLine("Flying");
         }
+
+        public override void Move()
+        {
+            base.Move();
+            Console.WriteLine("The Eagle");
+        }
     }
 }

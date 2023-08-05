@@ -8,9 +8,12 @@ namespace NestedType
 {
     class Animal
     {
-        public void Move()
+        public virtual void Move()
         {
-            Console.WriteLine("Moving");
+            Console.WriteLine("Movings");
         }
+
+        //public abstract void Move()
+
     }
 }
