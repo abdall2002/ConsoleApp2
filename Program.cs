@@ -67,11 +67,11 @@ using System;
 
 //foreach (var month in Enum.GetNames(typeof(Month)))
 //{
-  //  Console.WriteLine($"{month} = {(int)Enum.Parse(typeof(Month),month)}");
+//  Console.WriteLine($"{month} = {(int)Enum.Parse(typeof(Month),month)}");
 //}
 //foreach (var month in Enum.GetValues(typeof(Month)))
 //{
-  //  Console.WriteLine($"{month.ToString()} = {(int)month}");
+//  Console.WriteLine($"{month.ToString()} = {(int)month}");
 //}
 
 ///////////////////////////////////////////////////////////
@@ -94,3 +94,15 @@ using System;
 //Subclass sc = new Subclass(123);
 //Console.WriteLine(sc);            // -> print "NestedType.Subclass";
 //Console.WriteLine(sc.x);          // -> print 123;
+
+
+
+
+
+
+////////////////////////////////////////////////
+
+/* Interface */
+
+ILoader v3 = new Caterpiller("sad", "adsf", 2000);
+v3.Load();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NestedType
 {
-    class Caterpiller : Vehicle, ILoader
+    class Caterpiller : Vehicle, ILoader, IDrivablle
     {
         public Caterpiller(string brand, string model, int year) : base(brand, model, year)
         {
@@ -16,6 +16,16 @@ namespace NestedType
         public void Load()
         {
             Console.WriteLine("Loading");    
+        }
+
+        public void Move()
+        {
+            Console.WriteLine("Moving");
+        }
+
+        public void Stop()
+        {
+            throw new NotImplementedException("Stop");
         }
 
         public void UnLoad()
