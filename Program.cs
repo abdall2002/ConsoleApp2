@@ -83,3 +83,5 @@ e.Move();
 Animal a = e;         // -> point to Eagle; tread with Class Animal only; (Up Casting)
 Eagle e2 = (Eagle)a;  // -> (Down Casting); treat with Move() and Fly();
 Console.WriteLine(e);
+e2.Move();      // -> print "Moving";
+e2.Fly();       // -> print "Flying";
