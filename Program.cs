@@ -79,6 +79,7 @@ using System;
 /* Inheritance */
 
 Eagle e = new Eagle();
+e.Move();
 Animal a = e;         // -> point to Eagle; tread with Class Animal only; (Up Casting)
-Eagle e2 = (Eagle)a;  // -> (Down Casting); treat with Move() and Fly(); 
+Eagle e2 = (Eagle)a;  // -> (Down Casting); treat with Move() and Fly();
 Console.WriteLine(e);
