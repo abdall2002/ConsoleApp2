@@ -110,12 +110,26 @@ using System;
 ///////////////////////////////////////////////
 
 /* Generics */
+// Generic Method
 
-print(1);            // -> print System.Int32, 1;
-print("Abdallah");   // -> print System.String, "Abdallah";
-print('A');          // -> print System.Char, 'A';
-void print<T>(T value)
-{
-    Console.WriteLine($"DataType : {typeof(T)}");
-    Console.WriteLine($"DataType : {value}");
-}
+//print(1);            // -> print System.Int32, 1;
+//print("Abdallah");   // -> print System.String, "Abdallah";
+//print('A');          // -> print System.Char, 'A';
+//void print<T>(T value)
+//{
+//  Console.WriteLine($"DataType : {typeof(T)}");
+//Console.WriteLine($"DataType : {value}");
+//}
+
+// Generic class
+
+var numbers = new Any<int>();
+numbers.Add(1);
+numbers.Add(2);
+numbers.Add(3);
+numbers.DisplayList();
+numbers.RemoveAt(0);
+numbers.DisplayList();
+Console.WriteLine($"Length : {numbers.Count} items");
+Console.WriteLine($"Empty : {numbers.IsEmpty}");
+
