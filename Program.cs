@@ -154,11 +154,13 @@ using System;
 
 // delegate in subclass.cs;
 
+//void PrintNumber<T>(IEnumerable<T> numbers, Func<T, bool> filter, Action action)  // when use Action delegate;
 //void PrintNumber<T>(IEnumerable<T> numbers, Filter<T> filter)
 //or void PrintNumber<T>(IEnumerable<T> numbers, Predicate<T> filter)    // او دي
 //or void PrintNumber<T>(IEnumerable<T> numbers, Func<T, bool> filter)   // او دي
 
 //{
+//action();
 //foreach (var n in numbers)
 //{
 //if(filter(n))
