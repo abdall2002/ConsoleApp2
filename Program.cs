@@ -137,28 +137,39 @@ using System;
 
 /* Generic Delegate*/
 
-IEnumerable<int> list1 = new int[] { 2, 5, 6, 7, 9, 1, 3, 4, 8 };
-Console.WriteLine("Number less than 6");
-PrintNumber(list1,n => n < 6);
-Console.WriteLine("Number less than 7");
-PrintNumber(list1,n => n < 7);
-Console.WriteLine("Even Numbers");
-PrintNumber(list1, n => n % 2 == 0);
+//IEnumerable<int> list1 = new int[] { 2, 5, 6, 7, 9, 1, 3, 4, 8 };
+//Console.WriteLine("Number less than 6");
+//PrintNumber(list1,n => n < 6);
+//Console.WriteLine("Number less than 7");
+//PrintNumber(list1,n => n < 7);
+//Console.WriteLine("Even Numbers");
+//PrintNumber(list1, n => n % 2 == 0);
 
-IEnumerable<decimal> list2 = new decimal[] { 2.5m, 5.3m, 6.33m, 7.5m, 9.44m, 1.5m, 3.8m, 4.25m, 8.75m };
-Console.WriteLine("Numbers are Greater than 6.33 ");
-PrintNumber(list2, n => n >= 6.33m);
+//IEnumerable<decimal> list2 = new decimal[] { 2.5m, 5.3m, 6.33m, 7.5m, 9.44m, 1.5m, 3.8m, 4.25m, 8.75m };
+//Console.WriteLine("Numbers are Greater than 6.33 ");
+//PrintNumber(list2, n => n >= 6.33m);
 
 
 // delegate in subclass.cs;
 
-void PrintNumber<T>(IEnumerable<T> numbers, Filter<T> filter)
-{
-    foreach (var n in numbers)
-    {
-        if(filter(n))
-        {
-            Console.WriteLine(n);
-        }
-    }
-}
+//void PrintNumber<T>(IEnumerable<T> numbers, Filter<T> filter)
+//{
+    //foreach (var n in numbers)
+    //{
+        //if(filter(n))
+      //  {
+            //Console.WriteLine(n);
+    //    }
+  //  }
+//}
+
+// Acrion && Func and Predicate;
+
+void Print(string name) => Console.WriteLine(name);
+int Add(int n1, int n2) => n1 + n2; 
+bool IsEvent(int n) => n % 2 == 0;
+
+Action<string> action = Print;        // -> call Method;  
+action("Abdallah");                   // -> print "Abdallah"
+Func<int, int, int> addd = Add;       // -> 2 firstly input, lastly output;
+Console.WriteLine(addd(2,2));         // -> print 4  
