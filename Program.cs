@@ -124,12 +124,12 @@ using System;
 // Generic class
 
 var numbers = new Any<int>();
-numbers.Add(1);
-numbers.Add(2);
-numbers.Add(3);
-numbers.DisplayList();
-numbers.RemoveAt(0);
-numbers.DisplayList();
-Console.WriteLine($"Length : {numbers.Count} items");
-Console.WriteLine($"Empty : {numbers.IsEmpty}");
+numbers.Add(1);                
+numbers.Add(2);                
+numbers.Add(3);                
+numbers.DisplayList();              // -> print [1, 2, 3];
+numbers.RemoveAt(0); 
+numbers.DisplayList();              // -> print [2, 3];
+Console.WriteLine($"Length : {numbers.Count} items");             // -> print 2 items;
+Console.WriteLine($"Empty : {numbers.IsEmpty}");                  // -> false;
 
