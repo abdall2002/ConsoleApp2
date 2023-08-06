@@ -139,22 +139,24 @@ using System;
 
 //IEnumerable<int> list1 = new int[] { 2, 5, 6, 7, 9, 1, 3, 4, 8 };
 //Console.WriteLine("Number less than 6");
-//PrintNumber(list1,n => n < 6);
+//PrintNumber(list1,n => n < 6); 
+//PrintNumber(list1,n => n < 6, () => Console.WriteLine("Number less than 6"));   // or 
+
 //Console.WriteLine("Number less than 7");
-//PrintNumber(list1,n => n < 7);
+//PrintNumber(list1,n => n < 7, () => Console.WriteLine("Number less than 7"));   // or
 //Console.WriteLine("Even Numbers");
-//PrintNumber(list1, n => n % 2 == 0);
+//PrintNumber(list1, n => n % 2 == 0, () => Console.WriteLine("Even Numbers"));   // or
 
 //IEnumerable<decimal> list2 = new decimal[] { 2.5m, 5.3m, 6.33m, 7.5m, 9.44m, 1.5m, 3.8m, 4.25m, 8.75m };
 //Console.WriteLine("Numbers are Greater than 6.33 ");
-//PrintNumber(list2, n => n >= 6.33m);
+//PrintNumber(list2, n => n >= 6.33m, () => Console.WriteLine("Numbers are Greater than 6.33"));    // or 
 
 
 // delegate in subclass.cs;
 
 //void PrintNumber<T>(IEnumerable<T> numbers, Filter<T> filter)
-//or void PrintNumber<T>(IEnumerable<T> numbers, Predicate<T> filter)
-//or void PrintNumber<T>(IEnumerable<T> numbers, Func<T, bool> filter)
+//or void PrintNumber<T>(IEnumerable<T> numbers, Predicate<T> filter)    // او دي
+//or void PrintNumber<T>(IEnumerable<T> numbers, Func<T, bool> filter)   // او دي
 
 //{
 //foreach (var n in numbers)
@@ -178,3 +180,4 @@ Func<int, int, int> addd = Add;       // -> 2 firstly input, lastly output;
 Console.WriteLine(addd(2,2));         // -> print 4  
 Predicate<int> predicate = IsEven;    // -> store 1 parameter only;
 Console.WriteLine(predicate(3));      // -> print false;
+
