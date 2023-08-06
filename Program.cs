@@ -153,14 +153,17 @@ using System;
 // delegate in subclass.cs;
 
 //void PrintNumber<T>(IEnumerable<T> numbers, Filter<T> filter)
+//or void PrintNumber<T>(IEnumerable<T> numbers, Predicate<T> filter)
+//or void PrintNumber<T>(IEnumerable<T> numbers, Func<T, bool> filter)
+
 //{
-    //foreach (var n in numbers)
-    //{
-        //if(filter(n))
-      //  {
-            //Console.WriteLine(n);
-    //    }
-  //  }
+//foreach (var n in numbers)
+//{
+//if(filter(n))
+//  {
+//Console.WriteLine(n);
+//    }
+//  }
 //}
 
 // Acrion && Func and Predicate;
