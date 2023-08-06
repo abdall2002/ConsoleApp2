@@ -104,5 +104,18 @@ using System;
 
 /* Interface */
 
-ILoader v3 = new Caterpiller("sad", "adsf", 2000);
-v3.Load();
+//ILoader v3 = new Caterpiller("sad", "adsf", 2000);
+//v3.Load();
+
+///////////////////////////////////////////////
+
+/* Generics */
+
+print<int>(1);
+print<string>("Abdallah");
+print<char>('A');
+void print<T>(T value)
+{
+    Console.WriteLine($"DataType : {typeof(T)}");
+    Console.WriteLine($"DataType : {value}");
+}
