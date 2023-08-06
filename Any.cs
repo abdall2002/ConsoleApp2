@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace NestedType
 {
+    // where T : constrains1,constraints2,......    
     class Any<T>
     {
         private T[] _item;

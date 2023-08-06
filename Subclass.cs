@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace NestedType
 {
+    public delegate bool Filter(int n);
     class Subclass : Baseclass
     {
         public Subclass(int scvalue) : base(scvalue)

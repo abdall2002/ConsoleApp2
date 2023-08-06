@@ -123,13 +123,37 @@ using System;
 
 // Generic class
 
-var numbers = new Any<int>();
-numbers.Add(1);                
-numbers.Add(2);                
-numbers.Add(3);                
-numbers.DisplayList();              // -> print [1, 2, 3];
-numbers.RemoveAt(0); 
-numbers.DisplayList();              // -> print [2, 3];
-Console.WriteLine($"Length : {numbers.Count} items");             // -> print 2 items;
-Console.WriteLine($"Empty : {numbers.IsEmpty}");                  // -> false;
+//var numbers = new Any<int>();
+//numbers.Add(1);                
+//numbers.Add(2);                
+//numbers.Add(3);                
+//numbers.DisplayList();              // -> print [1, 2, 3];
+//numbers.RemoveAt(0); 
+//numbers.DisplayList();              // -> print [2, 3];
+//Console.WriteLine($"Length : {numbers.Count} items");             // -> print 2 items;
+//Console.WriteLine($"Empty : {numbers.IsEmpty}");                  // -> false;
 
+///////////////////////////////////////////////////////
+
+/* Generic Delegate*/
+
+IEnumerable<int> list1 = new int[] { 2, 5, 6, 7, 9, 1, 3, 4, 8 };
+Console.WriteLine("Number less than 6");
+PrintNumber(list1,n => n < 6);
+Console.WriteLine("Number less than 7");
+PrintNumber(list1,n => n < 7);
+Console.WriteLine("Even Numbers");
+PrintNumber(list1, n => n % 2 == 0);
+
+// delegate in subclass.cs;
+
+void PrintNumber(IEnumerable<int> numbers, Filter filter)
+{
+    foreach (var n in numbers)
+    {
+        if(filter(n))
+        {
+            Console.WriteLine(n);
+        }
+    }
+}
