@@ -167,9 +167,11 @@ using System;
 
 void Print(string name) => Console.WriteLine(name);
 int Add(int n1, int n2) => n1 + n2; 
-bool IsEvent(int n) => n % 2 == 0;
+bool IsEven(int n) => n % 2 == 0;
 
 Action<string> action = Print;        // -> call Method;  
 action("Abdallah");                   // -> print "Abdallah"
 Func<int, int, int> addd = Add;       // -> 2 firstly input, lastly output;
 Console.WriteLine(addd(2,2));         // -> print 4  
+Predicate<int> predicate = IsEven;    // -> store 1 parameter only;
+Console.WriteLine(predicate(3));      // -> print false;
