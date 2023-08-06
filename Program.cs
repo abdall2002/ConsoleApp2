@@ -145,9 +145,14 @@ PrintNumber(list1,n => n < 7);
 Console.WriteLine("Even Numbers");
 PrintNumber(list1, n => n % 2 == 0);
 
+IEnumerable<decimal> list2 = new decimal[] { 2.5m, 5.3m, 6.33m, 7.5m, 9.44m, 1.5m, 3.8m, 4.25m, 8.75m };
+Console.WriteLine("Numbers are Greater than 6.33 ");
+PrintNumber(list2, n => n >= 6.33m);
+
+
 // delegate in subclass.cs;
 
-void PrintNumber(IEnumerable<int> numbers, Filter filter)
+void PrintNumber<T>(IEnumerable<T> numbers, Filter<T> filter)
 {
     foreach (var n in numbers)
     {
