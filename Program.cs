@@ -111,9 +111,9 @@ using System;
 
 /* Generics */
 
-print<int>(1);
-print<string>("Abdallah");
-print<char>('A');
+print(1);            // -> print System.Int32, 1;
+print("Abdallah");   // -> print System.String, "Abdallah";
+print('A');          // -> print System.Char, 'A';
 void print<T>(T value)
 {
     Console.WriteLine($"DataType : {typeof(T)}");
